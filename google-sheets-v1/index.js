@@ -1,10 +1,10 @@
-const { GoogleSpreadsheet } = require("google-spreadsheet");
-const { JWT } = require("google-auth-library");
+import { GoogleSpreadsheet } from "google-spreadsheet";
+import { JWT } from "google-auth-library";
 
 /**
  * @params options: Record<string, string> = {email: "", key: "", spreadsheetId: ""}
  */
-export class GoogleSheetsApiV1 {
+class GoogleSheetsApiV1 {
   // Service Account Credentials - https://developers.google.com/workspace/guides/create-credentials#service-account-file
   options = {
     email: "",
@@ -37,4 +37,4 @@ export class GoogleSheetsApiV1 {
   }
 }
 
-module.exports = GoogleSheetsApiV1;
+export default GoogleSheetsApiV1;

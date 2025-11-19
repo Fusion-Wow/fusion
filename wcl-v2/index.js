@@ -1,7 +1,7 @@
 /**
  * @params options: Record<string, string> = {clientId: "", clientSecret: "", reportId: ""}
  */
-export class WclApiV2 {
+class WclApiV2 {
   // OAuth2 Credentials - https://www.warcraftlogs.com/api/clients/
   options = {
     clientId: "",
@@ -62,4 +62,4 @@ export class WclApiV2 {
   }
 }
 
-module.exports = WclApiV2;
+export default WclApiV2;
