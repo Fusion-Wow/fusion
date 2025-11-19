@@ -36,3 +36,5 @@ export class GoogleSheetsApiV1 {
     return this.doc;
   }
 }
+
+module.exports = GoogleSheetsApiV1;

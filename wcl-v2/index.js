@@ -61,3 +61,5 @@ export class WclApiV2 {
     return results.data;
   }
 }
+
+module.exports = WclApiV2;
