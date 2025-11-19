@@ -62,4 +62,4 @@ class WclApiV2 {
   }
 }
 
-export default WclApiV2;
+module.exports = WclApiV2;

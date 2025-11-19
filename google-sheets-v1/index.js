@@ -1,5 +1,5 @@
-import { GoogleSpreadsheet } from "google-spreadsheet";
-import { JWT } from "google-auth-library";
+const { GoogleSpreadsheet } = require("google-spreadsheet");
+const { JWT } = require("google-auth-library");
 
 /**
  * @params options: Record<string, string> = {email: "", key: "", spreadsheetId: ""}
@@ -37,4 +37,4 @@ class GoogleSheetsApiV1 {
   }
 }
 
-export default GoogleSheetsApiV1;
+module.exports = GoogleSheetsApiV1;
