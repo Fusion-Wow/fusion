@@ -1,4 +1,4 @@
-# Warcraft Logs Api Wrapper
+# Warcraft Logs API Wrapper
 
 This code is an attempt to make an easy to use abstraction for running queries using Warcraft Logs GraphQL API.
 
