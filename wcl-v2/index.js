@@ -39,7 +39,7 @@ export class WclApiV2 {
     return;
   }
 
-  async getWCL(query, queryParams = {}) {
+  async getLog(query, queryParams = {}) {
     let response = await fetch(`https://www.warcraftlogs.com/api/v2/client`, {
       method: "POST",
       headers: {
