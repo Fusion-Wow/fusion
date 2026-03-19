@@ -35,6 +35,11 @@ class GoogleSheetsApiV1 {
     await this.doc.updateProperties(properties);
     return this.doc;
   }
+
+  async getConfigSheet(sheetId) {
+    const sheet = this.doc.sheetsById[sheetId];
+    return sheet;
+  }
 }
 
 module.exports = GoogleSheetsApiV1;
