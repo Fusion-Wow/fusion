@@ -9,12 +9,20 @@
       "rank": 1
     },
     {
-      "team": "V",
-      "durationMs": 25147,
-      "formatted": "00:25",
-      "reportUrl": "https://www.warcraftlogs.com/reports/tmRX7kMcC28hr6dK",
-      "reportTitle": "Gruul / Magtheridon",
+      "team": "Z",
+      "durationMs": 23042,
+      "formatted": "00:23",
+      "reportUrl": "https://www.warcraftlogs.com/reports/H8rvTCaBxK61PcbM",
+      "reportTitle": "Week 5 - Raid Z2 - Archon Special",
       "rank": 2
+    },
+    {
+      "team": "V",
+      "durationMs": 24397,
+      "formatted": "00:24",
+      "reportUrl": "https://www.warcraftlogs.com/reports/CgdQHwJNW94XtDYf",
+      "reportTitle": "Gruul / Magtheridon",
+      "rank": 3
     },
     {
       "team": "Y",
@@ -22,14 +30,6 @@
       "formatted": "00:25",
       "reportUrl": "https://www.warcraftlogs.com/reports/2kKFHtyTRZ1YhjwG",
       "reportTitle": "Gruul / Magtheridon",
-      "rank": 3
-    },
-    {
-      "team": "Z",
-      "durationMs": 25684,
-      "formatted": "00:25",
-      "reportUrl": "https://www.warcraftlogs.com/reports/t2874RMbFVfCmQKv",
-      "reportTitle": "Raid Z Split 1 Gruul/Mag",
       "rank": 4
     },
     {
@@ -51,12 +51,28 @@
   ],
   "Gruul the Dragonkiller": [
     {
+      "team": "Z",
+      "durationMs": 110715,
+      "formatted": "01:50",
+      "reportUrl": "https://www.warcraftlogs.com/reports/QwFzmPA74ba82jMd",
+      "reportTitle": "Raid Z Split 2 Gruul/Mag",
+      "rank": 1
+    },
+    {
       "team": "Y",
       "durationMs": 116206,
       "formatted": "01:56",
       "reportUrl": "https://www.warcraftlogs.com/reports/WrX7tnz8wJCHbg1L",
       "reportTitle": "Test",
-      "rank": 1
+      "rank": 2
+    },
+    {
+      "team": "V",
+      "durationMs": 119115,
+      "formatted": "01:59",
+      "reportUrl": "https://www.warcraftlogs.com/reports/CgdQHwJNW94XtDYf",
+      "reportTitle": "Gruul / Magtheridon",
+      "rank": 3
     },
     {
       "team": "A",
@@ -64,7 +80,7 @@
       "formatted": "02:02",
       "reportUrl": "https://www.warcraftlogs.com/reports/hdgNjFxH8WaMnCpY",
       "reportTitle": "3/8 raid A",
-      "rank": 2
+      "rank": 4
     },
     {
       "team": "M",
@@ -72,22 +88,6 @@
       "formatted": "02:05",
       "reportUrl": "https://www.warcraftlogs.com/reports/p89hyPKv6Zc2tFYa",
       "reportTitle": "gay ",
-      "rank": 3
-    },
-    {
-      "team": "V",
-      "durationMs": 130750,
-      "formatted": "02:10",
-      "reportUrl": "https://www.warcraftlogs.com/reports/dQgz9hxmGNTPFRyK",
-      "reportTitle": "Raid V Mar15",
-      "rank": 4
-    },
-    {
-      "team": "Z",
-      "durationMs": 132766,
-      "formatted": "02:12",
-      "reportUrl": "https://www.warcraftlogs.com/reports/n9H8bByPvYqRhTmx",
-      "reportTitle": "Raid Z Split 1: Please Uninstall",
       "rank": 5
     },
     {
@@ -117,27 +117,27 @@
       "rank": 2
     },
     {
+      "team": "A",
+      "durationMs": 190011,
+      "formatted": "03:10",
+      "reportUrl": "https://www.warcraftlogs.com/reports/FPZgb1pWAtBRJzXT",
+      "reportTitle": "3/22 Raid A",
+      "rank": 3
+    },
+    {
+      "team": "V",
+      "durationMs": 201561,
+      "formatted": "03:21",
+      "reportUrl": "https://www.warcraftlogs.com/reports/CgdQHwJNW94XtDYf",
+      "reportTitle": "Gruul / Magtheridon",
+      "rank": 4
+    },
+    {
       "team": "T",
       "durationMs": 202286,
       "formatted": "03:22",
       "reportUrl": "https://www.warcraftlogs.com/reports/KkXYfcBy4p6gmAQa",
       "reportTitle": "25m | Raid T | Fusion 3•10",
-      "rank": 3
-    },
-    {
-      "team": "V",
-      "durationMs": 204118,
-      "formatted": "03:24",
-      "reportUrl": "https://www.warcraftlogs.com/reports/dQgz9hxmGNTPFRyK",
-      "reportTitle": "Raid V Mar15",
-      "rank": 4
-    },
-    {
-      "team": "A",
-      "durationMs": 208546,
-      "formatted": "03:28",
-      "reportUrl": "https://www.warcraftlogs.com/reports/kgxh6mPbrzJQRKYw",
-      "reportTitle": "3/15 raid A",
       "rank": 5
     },
     {

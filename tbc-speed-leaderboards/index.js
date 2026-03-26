@@ -175,16 +175,15 @@ async function buildLeaderboard(api) {
 function printLeaderboard(leaderboard) {
   const bosses = Object.keys(leaderboard).sort();
   const medals = ["🥇", "🥈", "🥉"];
-
-  console.log("\n╔══════════════════════════════════════════════════════╗");
-  console.log("║        FUSION — TBC SPEED LEADERBOARDS               ║");
-  console.log(`║        ${new Date().toLocaleString().padEnd(46)}║`);
-  console.log("╚══════════════════════════════════════════════════════╝");
+  console.log("");
+  console.log("         FUSION — TBC SPEED LEADERBOARDS               ");
+  console.log(`         ${new Date().toLocaleString().padEnd(46)} `);
+  console.log("──────────────────────────────────────────────────────────");
 
   for (const boss of bosses) {
     const entries = leaderboard[boss];
     console.log(`\n  ⚔  ${boss}`);
-    console.log("  " + "─".repeat(60));
+    console.log("  " + "─".repeat(80));
 
     for (const entry of entries) {
       const rankLabels = ["#1", "#2", "#3"];
@@ -201,7 +200,7 @@ function printLeaderboard(leaderboard) {
       console.log(`  ⬜  ${missing.join(", ")} — no kill recorded`);
     }
 
-    console.log("  " + "─".repeat(60));
+    console.log("  " + "─".repeat(80));
   }
 
   console.log("\n");
