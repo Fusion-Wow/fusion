@@ -1,23 +1,36 @@
 <script lang="ts">
   import type { PageData } from "./$types";
   import type { GuildPlayer } from "$lib/types";
+  import { untrack } from "svelte";
 
   const { data }: { data: any } = $props();
 
   type Player = GuildPlayer & { id: string; name: string };
 
-  const { players, picksOpen, leaderboard, existingPick } = data;
+  const tanks = $derived((data.players as Player[]).filter((p) => p.role === "tank"));
+  const healers = $derived((data.players as Player[]).filter((p) => p.role === "healer"));
+  const dps = $derived((data.players as Player[]).filter((p) => p.role === "dps"));
 
-  const tanks = (players as Player[]).filter((p) => p.role === "tank");
-  const healers = (players as Player[]).filter((p) => p.role === "healer");
-  const dps = (players as Player[]).filter((p) => p.role === "dps");
+  const _picksOpen = untrack(() => data.picksOpen);
+  const _leaderboard = untrack(() => data.leaderboard);
 
-  let picksStatus = $state(picksOpen ? "open" : "closed");
-  let leaderboard_state = $state(leaderboard ?? []);
-  let selectedTank = $state(existingPick?.tank_id ?? "");
-  let selectedHealer = $state(existingPick?.healer_id ?? "");
-  let selectedDps = $state([existingPick?.dps1_id ?? "", existingPick?.dps2_id ?? "", existingPick?.dps3_id ?? ""]);
-  let locked = $state(existingPick?.locked ?? false);
+  let picksStatus = $state(_picksOpen ? "open" : "closed");
+  let leaderboard_state = $state(_leaderboard ?? []);
+
+  function initPick() {
+    return {
+      tank: data.existingPick?.tank_id ?? "",
+      healer: data.existingPick?.healer_id ?? "",
+      dps: [data.existingPick?.dps1_id ?? "", data.existingPick?.dps2_id ?? "", data.existingPick?.dps3_id ?? ""],
+      locked: data.existingPick?.locked ?? false,
+    };
+  }
+
+  const pick = initPick();
+  let selectedTank = $state(pick.tank);
+  let selectedHealer = $state(pick.healer);
+  let selectedDps = $state(pick.dps);
+  let locked = $state(pick.locked);
   let errorMsg = $state("");
 
   function toggleDps(id: string) {
@@ -65,7 +78,7 @@
     {/if}
   </div>
 
-  {#if leaderboard.length === 0}
+  {#if leaderboard_state.length === 0}
     <p class="empty">No picks submitted yet for this week.</p>
   {:else}
     <table class="leaderboard">
@@ -81,7 +94,7 @@
         </tr>
       </thead>
       <tbody>
-        {#each leaderboard as entry, i}
+        {#each leaderboard_state as entry, i}
           <tr class:row--top={i === 0}>
             <td class="rank">{i + 1}</td>
             <td class="user">{entry.user_id}</td>
