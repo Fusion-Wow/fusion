@@ -6,6 +6,7 @@
   const { data }: { data: any } = $props();
 
   let picksStatus = $state(getPicksWindowStatus());
+  // svelte-ignore state_referenced_locally
   let leaderboard = $state(data.leaderboard ?? []);
 
   onMount(() => {
