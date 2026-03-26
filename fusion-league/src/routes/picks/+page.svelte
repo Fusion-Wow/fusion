@@ -4,27 +4,20 @@
 
   const { data }: { data: any } = $props();
 
-  type Player = GuildPlayer & { id: string };
+  type Player = GuildPlayer & { id: string; name: string };
 
-  // svelte-ignore state_referenced_locally
-  const tanks = (data.players as Player[]).filter((p) => p.role === "tank");
-  const healers = (data.players as Player[]).filter((p) => p.role === "healer");
-  const dps = (data.players as Player[]).filter((p) => p.role === "dps");
+  const { players, picksOpen, leaderboard, existingPick } = data;
 
-  let picksStatus = $state(data.picksOpen ? "open" : "closed");
-  let leaderboard = $state(data.leaderboard ?? []);
+  const tanks = (players as Player[]).filter((p) => p.role === "tank");
+  const healers = (players as Player[]).filter((p) => p.role === "healer");
+  const dps = (players as Player[]).filter((p) => p.role === "dps");
 
-  // svelte-ignore state_referenced_locally
-  let selectedTank = $state(data.existingPick?.tank_id ?? "");
-  // svelte-ignore state_referenced_locally
-  let selectedHealer = $state(data.existingPick?.healer_id ?? "");
-  let selectedDps = $state([
-    data.existingPick?.dps1_id ?? "",
-    data.existingPick?.dps2_id ?? "",
-    data.existingPick?.dps3_id ?? "",
-  ]);
-
-  let locked = $state(data.existingPick?.locked ?? false);
+  let picksStatus = $state(picksOpen ? "open" : "closed");
+  let leaderboard_state = $state(leaderboard ?? []);
+  let selectedTank = $state(existingPick?.tank_id ?? "");
+  let selectedHealer = $state(existingPick?.healer_id ?? "");
+  let selectedDps = $state([existingPick?.dps1_id ?? "", existingPick?.dps2_id ?? "", existingPick?.dps3_id ?? ""]);
+  let locked = $state(existingPick?.locked ?? false);
   let errorMsg = $state("");
 
   function toggleDps(id: string) {
